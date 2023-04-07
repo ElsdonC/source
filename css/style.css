@@ -1,0 +1,302 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  background-color: #f5f9fc;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  height: 4rem;
+  line-height: 4rem;
+}
+
+/* Navbar */
+nav {
+  width: 95%;
+  margin: auto;
+}
+nav > .fa-solid {
+  display: none;
+}
+nav h2,
+nav ul,
+nav button {
+  float: left;
+  width: 35%;
+}
+nav ul {
+  width: 40%;
+}
+nav h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2f4558;
+}
+nav ul li {
+  float: left;
+}
+nav ul li + li {
+  margin-left: 3rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #586c7d;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+nav button {
+  font-size: 0.9rem;
+  background-color: #304659;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1.05rem;
+  border: none;
+  width: auto;
+  float: right;
+}
+
+/* Section 1 */
+main {
+  height: 100%;
+}
+main section {
+  margin: 4rem 0 0 0;
+  height: 65%;
+  position: relative;
+}
+
+main section span,
+main section h1,
+main section form,
+main section p {
+  float: left;
+  clear: left;
+  margin: 0 0 0 10rem;
+}
+main section span {
+  padding-top: 5rem;
+  color: #8298a9;
+}
+main section h1 {
+  color: #2b4153;
+  font-size: 2.8rem;
+  font-weight: bold;
+  width: 20%;
+  line-height: 3rem;
+  padding: 1.5rem 0;
+}
+main section form {
+  height: 2.5rem;
+  width: 25rem;
+  margin-bottom: 1rem;
+}
+main section form input,
+main section form button {
+  height: 100%;
+  border: none;
+}
+main section form input {
+  background-color: #e1e9f0;
+  color: #78838d;
+  width: 70%;
+  padding: 1.25rem 0 1.25rem 1rem;
+}
+main section form button {
+  width: 25%;
+  background-color: #304659;
+  color: white;
+  font-weight: bold;
+}
+main section p {
+  color: #526575;
+  width: 20rem;
+  line-height: 1.5rem;
+}
+main section img {
+  height: 100%;
+  width: 55%;
+  position: absolute;
+  right: 0;
+}
+/* Feature Section */
+main section + section {
+  height: 20%;
+  margin-bottom: 5rem;
+}
+main section + section a {
+  text-decoration: none;
+}
+main section + section * {
+  clear: left;
+  float: left;
+}
+main section + section h2 {
+  font-weight: bold;
+  color: #304659;
+  font-size: 1.2rem;
+  padding: 0.75rem 0;
+}
+main section + section ul {
+  width: 85%;
+  margin-left: 10%;
+  margin-top: 2rem;
+  height: 17rem;
+}
+main section + section li {
+  clear: none;
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+
+main section + section p {
+  margin: 0;
+  padding: 0.75rem 5rem 1rem 0;
+}
+main section + section a {
+  color: #243a4f;
+  font-weight: bold;
+  position: absolute;
+  bottom: 4.5rem;
+  left: 0;
+}
+i {
+  margin-bottom: 2rem;
+}
+/* Collecting Info Section */
+main section + section + section {
+  background-color: white;
+  padding: 3rem 0 0 10%;
+  height: 26%;
+  margin: 0;
+  clear: both;
+}
+main section + section + section h2 {
+  font-size: 3rem;
+  width: 45%;
+}
+main section + section + section p {
+  width: 45%;
+}
+/* contact */
+footer {
+  height: 20rem;
+  clear: both;
+}
+footer section {
+  clear: both;
+  padding: 3% 0 0 10%;
+}
+footer section form * {
+  float: left;
+  clear: left;
+}
+footer section form input,
+footer section form textarea {
+  background-color: #e1e9f0;
+  color: #78838d;
+  border: none;
+  padding: 1rem 5rem 1rem 1rem;
+  margin: 1rem 0 1.5rem 0;
+}
+footer section form button {
+  background-color: #304659;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0 5rem 0;
+}
+
+/* Tablet and Mobile */
+@media screen and (max-width: 1300px) {
+  /* Navbar */
+  nav ul,
+  nav button {
+    display: none;
+  }
+  nav h2 {
+    padding-left: 25%;
+  }
+  nav > .fa-solid {
+    display: block;
+    float: left;
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+  main section span,
+  main section h1,
+  main section form,
+  main section p {
+    float: left;
+    clear: left;
+    margin-left: 5%;
+    width: 90%;
+  }
+  main section span {
+    padding-top: 0;
+  }
+  main section h1 {
+    width: 90%;
+  }
+  main section img {
+    position: relative;
+    clear: left;
+    float: right;
+    width: 95%;
+    height: 50%;
+    margin: 10% 0;
+  }
+  /* Feature Section */
+  main section + section {
+    height: fit-content;
+  }
+  main section + section ul {
+    height: fit-content;
+  }
+  main section + section li {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+  main section + section a {
+    position: relative;
+    bottom: 0;
+  }
+  main section + section + section h2, main section + section + section p {
+    width: 100%;
+    padding: 0 5% 0 0;
+  }
+  main section + section + section p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  } 
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
